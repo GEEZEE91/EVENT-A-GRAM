@@ -26,7 +26,7 @@ router.get('/:id', (req, res) => {
     include: [
       {
         model: Party,
-        attributes: ['id', 'title', 'ispublic', 'isover21', 'user_id', 'theme_id'],
+        attributes: ['id', 'title', 'ispublic', 'isover18', 'user_id', 'theme_id'],
         include: {
           model: Theme,
           attributes: ['id', 'theme_description']
