@@ -103,9 +103,10 @@ p {
 }
 
 
-footer {
+.footer {
     padding-top: 6px;
-    background-color: rgb(38, 2, 24);
+    background-color: rgba(125, 86, 202, 0.96);
+
 }
 
 footer p {
