@@ -5,8 +5,9 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
-    "seed": "node seeds/index.js"
+    "dev": "nodemon src/index.js",
+    "seed": "node seeds/index.js",
+    "start": "npm run seed && node index.js"
   },
   "repository": {
     "type": ""
@@ -24,12 +25,16 @@
     "handlebars": "^4.7.7",
     "mysql2": "^2.3.3",
     "nbrite": "^0.2.0",
-    "nodemon": "^2.0.20",
     "sequelize": "^6.25.6"
+    
   },
   "devDependencies": {
     "eslint": "^8.27.0",
     "eslint-config-prettier": "^8.5.0",
-    "prettier": "^2.7.1"
+    "prettier": "^2.7.1",
+    "bulma": "^0.9.4",
+    "clean-css": "^5.3.1",
+    "node-sass": "^8.0.0",
+    "nodemon": "^2.0.20"
   }
 }
