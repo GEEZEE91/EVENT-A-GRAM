@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "A website solution which provides the ability for you to create your own profile, share your events and view the events of all other people within your community whilst also maintaining privacy.",
   "main": "server.js",
+  "engines": {
+    "node": "16.17.1",
+    "npm": "8.15.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon server.js",
