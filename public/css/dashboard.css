@@ -195,10 +195,11 @@ body {
     margin: 25px;
     border-radius: 30px;
     color: rgba(14, 239, 235, 0.55);
-    box-shadow: 0px 0px 5px rgba(120, 215, 213, 0.55);
+    box-shadow: 2px 0px 5px rgba(1, 26, 25, 0.55);
 }
 
 .card-header {
+    margin-top: 3px;;
     font-size: 2rem;
     padding: 5px;
     text-transform: uppercase;
@@ -222,6 +223,27 @@ body {
 .card-date {
     justify-content: center;
 }
+
+
+.dashboard{
+    background-color: #a166d144;
+    background-image: url('../images/background.jpeg');
+    background-size: cover ;
+
+    }
+
+.search-card{
+        background-image: url('../images/background.jpeg');
+        background-size: cover; 
+        
+        }
+
+
+.body{
+            background-image: url('../images/background.jpeg');
+            background-size: cover; 
+            
+            }
 
 @media (max-width: 750px) {
     .toggle-button {
@@ -254,5 +276,6 @@ body {
     .navbar-links.active {
         display: flex;
     }
-}
-
+    .navbar-brand app-title {
+        font-size: 2rem;
+    }}
