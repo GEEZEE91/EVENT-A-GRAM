@@ -1,0 +1,35 @@
+{
+  "name": "Event-a-GRAM",
+  "version": "1.0.0",
+  "description": "A website solution which provides the ability for you to create your own profile, share your events and view the events of all other people within your community whilst also maintaining privacy.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "seed": "node seeds/seed.js"
+  },
+  "repository": {
+    "type": ""
+  },
+  "author": "Group 5",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.20.0",
+    "connect-session-sequelize": "^7.1.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-handlebars": "^6.0.6",
+    "express-session": "^1.17.3",
+    "handlebars": "^4.7.7",
+    "mysql2": "^2.3.3",
+    "nbrite": "^0.2.0",
+    "nodemon": "^2.0.20",
+    "sequelize": "^6.25.6"
+  },
+  "devDependencies": {
+    "eslint": "^8.27.0",
+    "eslint-config-prettier": "^8.5.0",
+    "prettier": "^2.7.1"
+  }
+}
