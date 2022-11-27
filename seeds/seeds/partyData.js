@@ -98,3 +98,8 @@ const partydata = [
     theme_id: 7
   },
 ];
+
+// create function seedParty and then export it
+const seedParty = () => Party.bulkCreate(partydata);
+
+module.exports = seedParty;
