@@ -29,15 +29,15 @@
     "mysql2": "^2.3.3",
     "nbrite": "^0.2.0",
     "sequelize": "^6.25.6"
-    
-  },
-  "devDependencies": {
-    "eslint": "^8.27.0",
-    "eslint-config-prettier": "^8.5.0",
-    "prettier": "^2.7.1",
-    "bulma": "^0.9.4",
-    "clean-css": "^5.3.1",
-    "node-sass": "^8.0.0",
-    "nodemon": "^2.0.20"
-  }
-}
+  }}
+//   },
+//   "devDependencies": {
+//     "eslint": "^8.27.0",
+//     "eslint-config-prettier": "^8.5.0",
+//     "prettier": "^2.7.1",
+//     "bulma": "^0.9.4",
+//     "clean-css": "^5.3.1",
+//     "node-sass": "^8.0.0",
+//     "nodemon": "^2.0.20"
+//   }
+// }
