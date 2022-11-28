@@ -1,8 +1,4 @@
-// function requires development...
-async function editPartyHandler(event) {
-    event.preventDefault();
-    window.alert('This buttons requires some work. Sorry!');
-}
+
 
 async function deletePartyHandler(event) {
     event.preventDefault();
@@ -28,6 +24,6 @@ async function goToDashboardHandler(event) {
 }
 
 
-document.getElementById('editPartyBtn').addEventListener('click', editPartyHandler);
+
 document.getElementById('deletePartyBtn').addEventListener('click', deletePartyHandler);
 document.getElementById('goToDashboardBtn').addEventListener('click', goToDashboardHandler);
