@@ -73,3 +73,16 @@ PLANNING
 ![Website flow](./public/images/website_flow.png)
 
 ## Database Schema diagram
+![Database Schema](./public/images/db_schema_planning.png)
+
+## Website images
+![Homepage](./public/images/homepage.png)
+
+![Register](./public/images/register.png)
+
+![Create Event](./public/images/create_event.png)
+
+![Search Event](./public/images/search_event.png)
+
+![Search Results](./public/images/search_results.png)
+
