@@ -32,7 +32,7 @@ Party.init(
         // define an ispublic column
         ispublic: {
             type: DataTypes.BOOLEAN,
-            allowNull: true,
+            allowNull: false,
             validate: {
                 isIn: [[ true, false]]
             }

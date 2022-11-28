@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User, Party, Theme } = require('../models');
+const { User, Party, Theme, savedEvents } = require('../models');
 // Import the custom middleware
 const withAuth = require('../utils/auth');
 
@@ -40,7 +40,7 @@ router.get('/dashboard', async (req, res) => {
         }
       });
       const user = dbUserData.get( { plain: true });
-      // console.log(user);
+     console.log(user);
 
       // now find all the parties associated with that user
       const dbPartyData = await Party.findAll({

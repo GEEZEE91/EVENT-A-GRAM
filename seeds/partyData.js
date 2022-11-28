@@ -93,7 +93,7 @@ const partydata = [
     startdate: '2023-01-26',
     title: 'Australia Day BBQ',
     ispublic: true,
-    isover18: false,
+    isover18: true,
     user_id: 2,
     theme_id: 7
   },

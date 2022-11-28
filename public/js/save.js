@@ -1,33 +1,31 @@
+const { application } = require("express");
 
 
-listenForLikes();
 
-const listenForLikes = () => {
-  const likes = document.querySelectorAll(".like");
-  likes.forEach(like => {
-   like.addEventListener("click", (event) => {
-     event.target.classList.toggle("like-no");
-     event.target.classList.toggle("like-yes");
-     if (event.target.classList.contains("like-yes")) {
-       console.log("✅💾 Saving Favorite...");
-       getFaveData(event.target);
-     } else {
-       console.log("❌ Removing Favorite...");
-       getFaveData(party.id);
-     }
-   })
-  })
+function saveProperty(id) {
+  if ($("#fav_" + id).attr("save") * 1 === 1) {
+    showMessage("Property already a favorite");
+  } else {
+    $("#fav_" + id).attr({ save: 1, src: "/images/saved.png" });
+    fetch("/api/properties/save/", {
+      method: "post",
+      body: JSON.stringify({
+        id,
+      }),
+      headers: { "Content-Type": "application/json" },
+    })
+      .then((response) => response.json())
+      .then((response) => showMessage("Property Liked"));
+  }
+}
+async function goToDashboardHandler(event) {
+    event.preventDefault();
+    document.location.replace('/dashboard');
 }
 
-const getFaveData = (elem) => {
-  const parent = elem.parentElement;
-  const img = parent.querySelector("img").src;
-  const name = parent.querySelector("h2").textContent;
-  const email = parent.querySelector("p").textContent;
-  const [firstName, lastName] = name.split(" ");
-  const faveObj = { img, firstName, lastName, email };
-  console.log(faveObj);
+async function saveProperty(event) {
+  event.preventDefault();
+  document.location.replace('/favorites');
 }
 
-
-document.getElementById('btn fav btn').addEventListener('click', listenForLikes);
+document.getElementById('editPartyBtn').addEventListener('click', editPartyHandler);

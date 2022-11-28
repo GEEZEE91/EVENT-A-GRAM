@@ -3,9 +3,18 @@
             <div class="app-slogan">Find, Create, Schedule, Share, Review Events Together</div>
 
 
-            <div class="hero-btn-container">
+            {{!-- <div class="hero-btn-container">
                 {{#if logged_in}}
                     <a href="/dashboard">Go to dashboard</a>
+                {{else}}
+                <a id="hero-sign-in-btn" class="hero-btn" type="hero-btn" href="/login">Sign Up Today</a>
+                {{/if}}
+            </div>
+          </div>
+          </div> --}}
+                <div class="hero-btn-container">
+                {{#if logged_in}}
+                <a id="hero-sign-in-btn" class="hero-btn" type="hero-btn" href="/logout"></a>
                 {{else}}
                 <a id="hero-sign-in-btn" class="hero-btn" type="hero-btn" href="/login">Sign Up Today</a>
                 {{/if}}

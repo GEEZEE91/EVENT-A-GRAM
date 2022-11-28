@@ -1,4 +1,3 @@
-// const getGeoCoordinates = require('/js/getGeoCoordinates');
 
 async function loginFormHandler(event) {
   event.preventDefault();
