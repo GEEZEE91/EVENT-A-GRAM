@@ -119,6 +119,41 @@ router.get('/search/:ispublic/:isover18/:theme_id', async (req, res) => {
   }
 });
 
+router.get('/search/:ispublic/:isover18', async (req, res) => {
+  console.log('**************** inside home-routes/search/:ispublic/:isover18/:theme_id ***************');
+  console.log('req.session.loggedIn value is', req.session.loggedIn);
+  console.log(typeof req.params.ispublic, typeof req.params.isover18, );
+
+  const ispublic = req.params.ispublic === "true";
+  const isover18 = req.params.isover18 === "true";
+
+  if(req.session.loggedIn) {
+    // Access our Party model and run .findAll() method
+    // with conditions as shown below
+    const dbPartyData = await Party.findAll({
+      where: {
+        ispublic: ispublic,
+        isover18: isover18,
+      },
+      include: [
+        {
+          model: Theme,
+          attributes: ['id', 'theme_description']
+        },
+        {
+          model: User,
+          attributes: ['id', 'firstname', 'lastname', 'email']
+        }
+      ]
+    });
+
+    const parties = dbPartyData.map(result => result.get({ plain: true }));
+    console.log('////////////////// partySearchResults is:', parties);
+    // when the search results are rendered, pass in the partySearchResults array, which
+    // is just an array of party objects meeting the search criteria
+    res.render('search', { parties, loggedIn: req.session.loggedIn });
+  }
+});
 // SHOW one party
 router.get('/party/:id', async (req, res) => {
   console.log('**************** inside home-routes/party/:id ***************');
